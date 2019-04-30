@@ -13,7 +13,6 @@ public class UserController {
     /**
      * 资源API
      */
-//    @RequestMapping("/auth")
     @RequestMapping("/api/userinfo")
     public ResponseEntity<UserInfo> getUserInfo() {
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
