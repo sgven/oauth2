@@ -34,6 +34,13 @@ public class OAuth2LoginConfig {
         }
     }
 
+    /**
+     * ClientRegistrationRepository充当ClientRegistration的存储库
+     * (ClientRegistration)客户端注册信息最终由关联的授权服务器存储和拥有
+     * ClientRegistrationRepository默认实现是InMemoryClientRegistrationRepository
+     * The auto-configuration also registers the ClientRegistrationRepository as a @Bean in the ApplicationContext
+     * @return
+     */
     @Bean
     public ClientRegistrationRepository clientRegistrationRepository() {
         return new InMemoryClientRegistrationRepository(aaaClientRegistration());
@@ -51,7 +58,7 @@ public class OAuth2LoginConfig {
                 .clientSecret(clientSecret)  // (3)
                 .clientAuthenticationMethod(ClientAuthenticationMethod.POST)  // (4)
                 .redirectUriTemplate("{baseUrl}/login/oauth2/code/{registrationId}")  // (5)
-                .clientName("使用github登录app")       // (6)
+                .clientName("github登录")       // (6)
                 .tokenUri("http://localhost:8080/oauth/token")  // (7)
                 .authorizationUri("http://localhost:8080/oauth/authorize")  // (8)
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)  // (9)
