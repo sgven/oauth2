@@ -59,7 +59,7 @@ public class AuthorizationCodeTokenService {
     public OAuth2Token getToken(String authorizationCode) {
         RestTemplate rest = new RestTemplate();
         String authBase64 = configuration.encodeCredentials("clientapp",
-                "112233");
+                "12345");
 
         RequestEntity<MultiValueMap<String, String>> requestEntity = new RequestEntity<>(
                 configuration.getBody(authorizationCode),

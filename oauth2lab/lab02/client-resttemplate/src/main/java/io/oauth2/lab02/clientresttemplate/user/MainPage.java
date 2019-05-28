@@ -16,6 +16,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
@@ -59,7 +60,7 @@ public class MainPage {
                 .getContext().getAuthentication().getPrincipal();
         ClientUser clientUser = userDetails.getClientUser();
 
-        if (clientUser.getAccessToken() == null) {
+        if (StringUtils.isEmpty(clientUser.getAccessToken())) {
             String authEndpoint = tokenService.getAuthorizationEndpoint();
             return new ModelAndView("redirect:" + authEndpoint);
         }
