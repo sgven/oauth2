@@ -5,6 +5,9 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 
+import io.oauth2.lab02.clientresttemplate.oauth.AuthorizationCodeTokenService;
+import io.oauth2.lab02.clientresttemplate.oauth.OAuth2Token;
+import io.oauth2.lab02.clientresttemplate.security.ClientUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.RequestEntity;
@@ -18,9 +21,6 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
-import io.spring2go.clientresttemplate.oauth.AuthorizationCodeTokenService;
-import io.spring2go.clientresttemplate.oauth.OAuth2Token;
-import io.spring2go.clientresttemplate.security.ClientUserDetails;
 
 @Controller
 public class MainPage {
