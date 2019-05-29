@@ -1,6 +1,6 @@
-#客户端以授权码方式访问OAuth2服务器案例，使用rest template
+# 客户端以授权码方式访问OAuth2服务器案例，使用rest template
 
-##注意事项：
+## 注意事项：
 - 1.需要预先安装mysql数据库，再使用mysql workbench预先执行sql脚本src\main\resources\db\oauth_client.sql
 - 2.该案例需先启动lab01中的支持授权码模式的OAuth2服务器，端口在8080
 - 3.再运行本案例web应用，端口在9001，浏览器访问http://locahost:9001
@@ -15,4 +15,4 @@
 - 5.第一次授权时，授权服务器也需要进行security登录，账号密码配置在application.properties，授权服务器登录后会将用户引导至授权页码
 - 6.用户授权后，授权服务器重定向至客户端注册的redirect_uri，这里进到客户端的/callback接口，
 这时拿到授权码，调用token端点获取访问令牌access_token，将access_token存到数据库，并回到/mainpage
-- 7.这时客户端拿到了access_token，在/mainpage中tryToGetUserInfo()尝试去资源服务器获取用户信息，就可以获取到了
+- 7.这时客户端拿到了access_token，在/mainpage中tryToGetUserInfo()尝试去资源服务器获取用户信息，就可以获取到了，最后浏览器将/mainpage的信息做个简单的展示

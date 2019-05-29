@@ -17,3 +17,10 @@ insert into client_user
 (username, password)
 value
 ('bobo', 'xyz');
+
+-- Spring Security升级到5.0以后，password需要加密存储，字段长度至少varchar(60)
+ALTER TABLE `clientdb`.`client_user`
+  CHANGE `password` `password` VARCHAR(60) CHARSET utf8 COLLATE utf8_general_ci NULL;
+-- 对原始密码xyz，更新为使用BCrypt加密后的值
+UPDATE `clientdb`.`client_user` SET password="$2a$10$KlzSHIdsd0q2jgPrsf2UTeluz./CWanknwX0qXFwSHJmX2DUvoGGG"
+  WHERE username="bobo";
