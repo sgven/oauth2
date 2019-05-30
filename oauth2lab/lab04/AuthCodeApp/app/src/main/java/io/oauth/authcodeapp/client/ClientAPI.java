@@ -5,7 +5,7 @@ import io.oauth.authcodeapp.client.oauth2.OAuth2API;
 import io.oauth.authcodeapp.client.userinfo.UserInfoAPI;
 
 public class ClientAPI {
-    public static final String BASE_URL = "192.168.1.104:8080";
+    public static final String BASE_URL = "192.168.56.1:8080";
 
     public static UserInfoAPI userInfo() {
         RetrofitAPIFactory api = new RetrofitAPIFactory(BASE_URL, null);

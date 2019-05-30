@@ -7,12 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
+import io.oauth.authcodeapp.R;
 import io.oauth.authcodeapp.client.ClientAPI;
 import io.oauth.authcodeapp.client.oauth2.AccessToken;
 import io.oauth.authcodeapp.client.oauth2.AccessTokenRequest;
 import io.oauth.authcodeapp.client.oauth2.OAuth2StateManager;
 import io.oauth.authcodeapp.client.oauth2.TokenStore;
-import spring2go.io.authcodeapp.R;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

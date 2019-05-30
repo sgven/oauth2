@@ -5,8 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
+import io.oauth.authcodeapp.R;
 import io.oauth.authcodeapp.client.oauth2.TokenStore;
-import spring2go.io.authcodeapp.R;
+
 import io.oauth.authcodeapp.client.ClientAPI;
 import io.oauth.authcodeapp.client.userinfo.UserInfo;
 import retrofit2.Call;
