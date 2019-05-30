@@ -9,11 +9,11 @@ import android.widget.Button;
 
 import java.util.UUID;
 
+import io.oauth.authcodeapp.R;
 import io.oauth.authcodeapp.client.oauth2.AccessToken;
 import io.oauth.authcodeapp.client.oauth2.AuthorizationRequest;
 import io.oauth.authcodeapp.client.oauth2.OAuth2StateManager;
 import io.oauth.authcodeapp.client.oauth2.TokenStore;
-import spring2go.io.authcodeapp.R;
 
 public class MainActivity extends AppCompatActivity
         implements View.OnClickListener {
